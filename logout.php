@@ -1,0 +1,9 @@
+<?php
+include("dbConfig.php");
+unset($_SESSION['login']);
+session_destroy();
+//print_r($_SESSION['user_detail']['id']);
+//exit;
+header("location:index.php");
+exit;
+?>

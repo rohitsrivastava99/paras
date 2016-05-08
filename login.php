@@ -1,3 +1,24 @@
+<?php include("dbConfig.php");?>
+<?php 
+
+if(isset($_POST['submit'])){
+
+	
+	
+    $email = $_POST["email"]; 
+     $password = $_POST["password"];
+     $query = "SELECT * FROM users WHERE email = '$email'";
+	$rs_email = mysqli_query($con , $query);
+	$result_email = mysqli_fetch_array($rs_email);
+
+	if(isset($result_email['email']) && !empty($result_email['email']))
+	{
+    	$_SESSION['login'] = $result_email['email'] ;
+	}else{
+
+ 	}
+}	 
+?>
 <?php include("header.php");?>
 <!-- login -->
 <div class="login">
@@ -7,12 +28,12 @@
 					 <h3>LOGIN</h3>
 					 <img src="images/27.png" alt=""/>
 					 <p>Welcome, please enter the following to continue.</p>
-					 <form>
+					<form name="form1" method="post" action="login.php"  >
 						 <h5>User Name:</h5>	
-						 <input type="text" value="">
+						 <input type="text" name="email" value="">
 						 <h5>Password:</h5>
-						 <input type="password" value="">					
-						 <input type="submit" value="LOGIN">
+						 <input type="password" name="password" value="">					
+						 <input type="submit" name="submit" value="LOGIN">
 						  <a href="#">Forgot Password ?</a>
 					 </form>				 
 			</div>

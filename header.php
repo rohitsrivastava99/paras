@@ -44,8 +44,14 @@
 		</div>
 		<div class="header-right">
 			<ul>
+			<?php 
+			if(isset($_SESSION['login']) && !empty($_SESSION['login'])){
+				echo "<li><a href='#'> Welcome ". $_SESSION['login'] ."</a></li> | <li><a href='logout.php'>Log out</a></li>";
+			}else{
+			?>
 				<li><a href="login.php">Login</a></li>
 				<li><a href="register.php">Register</a></li>
+			<?php } ?>	
 			</ul>
 			
         </div>
