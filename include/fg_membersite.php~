@@ -789,7 +789,7 @@ class FGMembersite
         $formvars['confirmcode'] = $confirmcode;
         
         $insert_query = 'insert into '.$this->tablename.'(
-                name,
+                firstname,
                 email,
                 username,
                 password,
@@ -797,7 +797,7 @@ class FGMembersite
                 )
                 values
                 (
-                "' . $this->SanitizeForSQL($formvars['name']) . '",
+                "' . $this->SanitizeForSQL($formvars['firstname']) . '",
                 "' . $this->SanitizeForSQL($formvars['email']) . '",
                 "' . $this->SanitizeForSQL($formvars['username']) . '",
                 "' . md5($formvars['password']) . '",

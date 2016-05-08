@@ -46,7 +46,7 @@
          </div>
          <div class="tab-pane" id="c">
              <h1>One 2 All Message</h1>
-             <form class="tbfrm">
+             <form class="tbfrm" enctype="multipart/form-data" action="upload.php" method="post">
                 <div class="form-group">
                     <input type="name" class="form-control" placeholder="Enter Your Mobile">
                 </div>
@@ -57,13 +57,15 @@
                  <div class="input-group">
                      <button class="btn btn-info">Submit</button>
                      <button class="btn btn-danger">Add To card</button>
-                     <button class="btn btn-defaut">Update Info</button>
+                     <br/>
+                     <input type="file" name="fileToUpload" id="fileToUpload">
+                     <input type="submit" value="Upload Image">
                  </div>
              </form>
          </div>
          <div class="tab-pane" id="d">
              <h1>Calling</h1>
-             <form class="tbfrm">
+             <form class="tbfrm" enctype="multipart/form-data" action="upload.php" method="post">
                 <div class="form-group">
                     <input type="name" class="form-control" placeholder="Enter Your Mobile">
                 </div>
@@ -74,7 +76,10 @@
                  <div class="input-group">
                      <button class="btn btn-info">Submit</button>
                      <button class="btn btn-danger">Add To card</button>
-                     <button class="btn btn-defaut">Update Info</button>
+                     <br/>
+                     <input type="file" name="fileToUpload2" id="fileToUpload2">
+                    <input type="submit" value="Upload Image">
+
                  </div>
              </form>
          </div>
