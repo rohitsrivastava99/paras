@@ -1,0 +1,129 @@
+.tabs-below > .nav-tabs {
+  border-top: 1px solid #ddd;
+}
+.tbleft ul .active a
+{
+    background-color:#E60000 !important;
+    color: #fff !important;
+}
+.tbleft ul li{
+    background: #5DB4F9;
+    border-radius: 4px;
+    margin: 10px 0px;
+    text-align: center;
+}
+.tbleft li a {
+    font-size: 20px;
+    color: #fff;
+    padding: 8px 0px 8px 10px !important;
+}
+
+
+.tabs-left > .nav-tabs > li,
+.tabs-right > .nav-tabs > li {
+  float: none;
+}
+
+.tabs-left > .nav-tabs > li > a,
+.tabs-right > .nav-tabs > li > a {
+  min-width: 74px;
+  margin-right: 0;
+  margin-bottom: 3px;
+}
+
+.tabs-left > .nav-tabs {
+  float: left;
+  margin-right: 19px;
+  border-right: 1px solid #ddd;
+}
+
+.tabs-left > .nav-tabs > li > a {
+  margin-right: -1px;
+  -webkit-border-radius: 4px 0 0 4px;
+     -moz-border-radius: 4px 0 0 4px;
+          border-radius: 4px 0 0 4px;
+}
+
+.tbleft li.active a
+{
+    border: none !important;
+}
+.tbleft li a:hover {
+    border-color: #fff !important;
+}
+
+a:focus {
+     outline: none!important; 
+     outline: none !important; 
+     outline-offset: 0px !important; 
+}
+.tbleft .nav-tabs
+{
+border: none !important;
+
+}
+.tbleft .tabbable, .tbleft .tabs-left, .tbleft .nav,.tbleft .nav-tabs,.tbleft .tab-content
+{
+overflow: hidden;
+}
+.tbleft
+{
+    padding:5em 2em;
+    overflow:hidden;
+}
+.tbleft li a {
+    font-size: 20px;
+}
+.tabs-left > .nav-tabs {
+    border-right: 1px solid #fff;
+    width: 18%;
+}
+.tbleft .tab-pane
+{
+
+}
+.tbleft .tab-content {
+    width: 78%;
+    overflow: hidden;
+    border: 1px solid #F1F1F1;
+    padding: 0em 1em 4em 1em;
+    min-height: 437px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.tab-pane h1 {
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+        padding: 2px 0px;
+    margin-bottom: 10px;
+}
+.propic {
+    border-radius: 50px;
+    overflow: hidden;
+}
+.propic img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    border: 3px solid #ddd;
+    margin-bottom: 8px;
+}
+.sevpro {
+    overflow: hidden;
+    float: right;
+}
+
+.form-group {
+    border: 1px solid #ddd;
+}
+.tbfrm input[type="checkbox"]
+{
+float: left;
+    margin-right: 10px;
+}
+.tbfrm .input-group button {
+    margin-right: 50px;
+    padding: 7px 25px 7px 25px;
+}

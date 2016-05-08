@@ -1,0 +1,58 @@
+<!-- contact -->
+<div id="contact" class="contact">
+	<div class="container">
+		<div class="contact-grids">
+			<div class="col-md-3 contact-grid">
+				<h2>Life Works</h2>
+				<ul class="shortlink">
+				    <li><a href="index.php">Home</a></li>
+				    <li><a href="about.php">About us</a></li>
+				    <li><a href="services.php">SERVICES</a></li>
+				    <li><a href="sample.php">Sample</a></li>
+				    <li><a href="contact.php">Contact</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 contact-grid a">
+				<h3>Contacts</h3>
+				<p>301, Emerald Tower,
+				    <span>Ashwini Market, Hathipole,</span>
+                    Udaipur - 313001
+                </p>
+				<p>Phone: (+91)94620 54590</p>
+				<p><a href="mail-to:sample@example.com">info@squadroninfotech.com</a></p>
+			</div>
+			<div class="col-md-3 contact-grid">
+				<div class="fb-page" data-href="https://www.facebook.com/squadronudp/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/squadronudp/"><a href="https://www.facebook.com/squadronudp/">Squadron Infotech</a></blockquote></div></div>
+			</div>
+			<div class="col-md-3 contact-grid">
+				<h3>Subscribe</h3>
+				<form>
+					<input type="text" placeholder="Name" required>
+					<input type="text" placeholder="Email" required>
+					<center><input type="submit" value="SUBSCRIBE"></center>
+				</form>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>
+<!-- //contact -->
+<!-- footer -->
+<div class="footer">
+	<div class="container">
+		<div class="footer-grids">
+			<div class="footer-content">
+				<p>Copyright &copy; 2015. Design by <a href="www.squadroninfotech.com">Squadron Infotech</a></p>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>
+<!-- //footer -->
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
