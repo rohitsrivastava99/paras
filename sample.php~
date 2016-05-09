@@ -39,7 +39,7 @@
                      <div class="btn btn-danger"><a href="logout.php">Log-Out</a></div>
                  </div>
             </div>
-           <textarea rows="10" cols="80" name="comment" readonly><?php $str = $_SESSION['description']; echo $str; ?></textarea>
+           <textarea rows="10" cols="75" name="comment" readonly><?php $str = $_SESSION['description']; echo $str; ?></textarea>
          </div>
 
          <div class="tab-pane" id="b">
