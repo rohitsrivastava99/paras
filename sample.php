@@ -7,7 +7,7 @@
 <?php
 	if(isset($_POST['photo'])){
 		move_uploaded_file($_FILES['file']['tmp_name'],"pictures/".$_FILES['file']['name']);
-		$q = mysqli_query($con,"UPDATE users SET image = '".$_FILES['file']['name']."' WHERE username = '".$_SESSION['username']."'");
+		$q = mysqli_query($con,"UPDATE users SET image = '".$_FILES['file']['name']."' WHERE email = '".$_SESSION['login']."'");
 	}
 ?>
 
@@ -39,9 +39,7 @@
                      <div class="btn btn-danger"><a href="logout.php">Log-Out</a></div>
                  </div>
             </div>
-           <textarea rows="10" cols="80" readonly>
-           At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.
-			</textarea>
+           <textarea rows="10" cols="80" name="comment" readonly><?php $str = $_SESSION['description']; echo $str; ?></textarea>
          </div>
 
          <div class="tab-pane" id="b">

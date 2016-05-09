@@ -1,17 +1,72 @@
-<?PHP
-require_once("./include/membersite_config.php");
+<?php include("dbConfig.php");?>
+<?php
 
-if(isset($_POST['submitted']))
+//get all values
+if(isset($_POST['submit'])){
+
+	
+    $first_name = $_POST["first_name"]; 
+    $last_name = $_POST["last_name"]; 
+    $email = $_POST["email"]; 
+    $password = $_POST["password"]; 
+    $confpassword = $_POST["confpassword"]; 
+    $mobile = $_POST["mobile"]; 
+    $organisation = $_POST["organisation"]; 
+    $type = $_POST["type"]; 
+    $proffession = $_POST["proffession"]; 
+    $workphno = $_POST["workphno"]; 
+    $address = $_POST["address"]; 
+    $pincode = $_POST["pincode"]; 
+    $city = $_POST["city"]; 
+    $state = $_POST["state"]; 
+    $country = $_POST["country"]; 
+   // $submit = $_POST["submit"]; 
+
+//check for email
+
+$query = "SELECT * FROM users WHERE email = '$email'";
+$rs_email = mysqli_query($con , $query);
+$result_email = mysqli_fetch_array($rs_email);
+
+
+if(isset($result_email['email']) && !empty($result_email['email']))
 {
-   if($fgmembersite->RegisterUser())
-   {
-        $fgmembersite->RedirectToURL("thank-you.html");
-   }
+    $_SESSION['error'].="<br />Email already  exist" ;
+}else{
+
+	
+
+            $query = "INSERT INTO users(first_name,last_name,email,password ,mobile_no,organisation,type,profession,work_ph_no,address,pin_code,city,state,country)
+             VALUES('$first_name','$last_name','$email','$password' ,'$mobile','$organisation','$type','$proffession','$workphno','$address','$pincode','$city','$state','$country')";
+          
+            $rs = mysqli_query($con , $query);
+            if($rs==1)
+            {
+
+                //set a successfully message
+
+                $_SESSION['error']="Your account has been successfully created.<br /> an email has been sent to your given email address";
+               // $_SESSION['login']= $first_name;
+                //send a mail to given email address
+
+                //$message = "Your account has been successfully created";
+                	
+
+                    $to      = $email;
+                    $subject = 'the subject';
+                    $message = 'Your account has been successfully created <br/> username=$name and password=$password';
+                    $headers = 'From: webmaster@example.com' ;
+                    mail($to, $subject, $message, $headers);
+
+
+
+                
+            }
+}
 }
 
 ?>
 <?php include("header.php");?>
-<div id='fg_membersite'>
 <div class="registration-form">
 	<div class="container">
 		<div class="registration-grids">
@@ -19,40 +74,38 @@ if(isset($_POST['submitted']))
 				<div class="reg">
                   <h3>Registration Form</h3>
 					 
-					 <form id='register' action='<?php echo $fgmembersite->GetSelfScript();?>' method='post' accept-charset='UTF-8'>
-<input type='hidden' name='submitted' id='submitted' value='1'/>
+					 <form name="form1" method="post" action="register.php"  >
 						 <ul>
 							 <li class="text-info">First Name: </li>
-							 <li><input type='text' name='name' id='name' value='<?php echo $fgmembersite->SafeDisplay('name') ?>' maxlength="50" /></li>
+							 <li><input required type="text" name="first_name" value=""></li>
 						 </ul>
 						 <ul>
 							 <li class="text-info">Last Name: </li>
-							 <li><input type='text' name='username' id='username' value='<?php echo $fgmembersite->SafeDisplay('username') ?>' maxlength="50" /></li>
+							 <li><input required type="text" name="last_name" value=""></li>
 						 </ul>				 
 						<ul>
 							 <li class="text-info">Email: </li>
-							 <li><input type='text' name='email' id='email' value='<?php echo $fgmembersite->SafeDisplay('email') ?>' maxlength="50" /></li>
+							 <li><input required type="text" name="email" value=""></li>
 						 </ul>
 						 <ul>
 							 <li class="text-info">Password: </li>
-							 <li><input type='password' name='password' id='password' maxlength="50" />
-							 </li>
+							 <li><input required type="password" name="password" value=""></li>
 						 </ul>
 						 <ul>
 							 <li class="text-info">Re-enter Password:</li>
-							 <li><input  type="password" value=""></li>
+							 <li><input required type="password" name="confpassword" value=""></li>
 						 </ul>
 						 <ul>
 							 <li class="text-info">Mobile Number:</li>
-							 <li><input  type="text" value=""></li>
+							 <li><input required type="text" name="mobile" value=""></li>
 						 </ul>	
 						 <ul>
 							 <li class="text-info">Organisation:</li>
-							 <li><input  type="text" value=""></li>
+							 <li><input required type="text" name="organisation" value=""></li>
 						 </ul>
 						 <ul>
 						 	<li class="text-info">Type:</li>
-							 <li><select class="select-option">
+							 <li><select class="select-option" name="type">
 							 	<option>Normal</option>
 							 	<option>Commercial</option>
 							 	<option>Event Managers</option>
@@ -60,35 +113,36 @@ if(isset($_POST['submitted']))
 						 </ul>
 						 <ul>
 						 	<li class="text-info">Proffession:</li>
-							 <li><input type="text" value=""></li>
+							 <li><input type="text" name="proffession" value=""></li>
 						 </ul>
 						 <ul>
 							 <li class="text-info">Work Ph No.:</li>
-							 <li><input type="text" value=""></li>
+							 <li><input type="text" name="workphno" value=""></li>
 						 </ul>
 						 <ul>
 							 <li class="text-info">Address:</li>
-							 <li><input  type="text" value=""></li>
+							 <li><input required type="text" name="address" value=""></li>
 						 </ul>
 						 <ul>
 							 <li class="text-info"> Pin Code:</li>
-							 <li><input  type="text" value=""></li>
+							 <li><input required type="text" name="pincode" value=""></li>
 						 </ul>
 						 <ul>
 							 <li class="text-info">City:</li>
-							 <li><select class="select-option"><option>City Name</option>
+							 <li><select class="select-option" name="city"
+							 ><option>City Name</option>
 							 </select></li>
 						 </ul>	
 						 <ul>
 							 <li class="text-info">State:</li>
-							 <li><select class="select-option"><option>State Name</option>
+							 <li><select class="select-option" name="state"><option>State Name</option>
 							 </select></li>
 						 </ul>
 						 <ul>
 							 <li class="text-info">Country:</li>
-							 <li><input type="text" value=""></li>
+							 <li><input type="text" name="country" value=""></li>
 						 </ul>
-						 <input type='submit' name='Submit' value='Submit'/>
+						 <input type="submit" name="submit" value="submit">
 						  
 					 </form>
 				 </div>
@@ -100,7 +154,6 @@ if(isset($_POST['submitted']))
             </div>
 			<div class="clearfix"></div>
 		</div>
-	</div>
 	</div>
 </div>
 <!-- registration-form -->
