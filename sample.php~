@@ -30,13 +30,14 @@
                 <div class="propic">
                      <center><img src="images/41.jpg"></center>
                  </div>
-                 <form action="" method="post" enctype="multipart/form-data" id="photo">
+                 <form enctype="multipart/form-data" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                         <input type="file" name="file">
                         <input type="submit" name="photo">
                 </form>
+                <h3> Hello.. <?php echo $_SESSION['name'];?></h3>
                  <div class="prologout">
                      <div class="btn btn-info"><a href="#photo">Edit Profile</a></div>
-                     <div class="btn btn-danger"><a href="logout.php">Log-Out</a></div>
+                     <a href="logout.php"><div class="btn btn-danger">Log-Out</div></a>
                  </div>
             </div>
            <textarea rows="10" cols="75" name="comment" readonly><?php $str = $_SESSION['description']; echo $str; ?></textarea>

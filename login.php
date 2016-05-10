@@ -13,6 +13,7 @@ if(isset($_POST['submit'])){
         if(isset($result_email['email']) && !empty($result_email['email']))
 	{
     	$_SESSION['login'] = $result_email['email'] ;
+        $_SESSION['name'] = $result_email['first_name'] ;
 	$type = $result_email['type'];
         $query2 = "SELECT * FROM category WHERE id ='$type'";
         $rs_email2 = mysqli_query($con , $query2);
