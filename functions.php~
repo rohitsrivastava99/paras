@@ -1,14 +1,13 @@
-<?php include("dbConfig.php");?>
-<?php
+<?php include("dbConfig.php");
 	function get_product_name($pid){
                 $query_name = "select name from products where serial=$pid";
-		$result=mysqli_query($con, $query_name);
+		$result=mysqli_query($con,$query_name);
 		$row=mysqli_fetch_array($result);
 		return $row['name'];
 	}
 	function get_price($pid){
 		$query_price = "select price from products where serial=$pid";
-		$result=mysqli_query($con, $query_price);
+		$result=mysqli_query($con,$query_price);
 		$row=mysqli_fetch_array($result);
 		return $row['price'];
 	}

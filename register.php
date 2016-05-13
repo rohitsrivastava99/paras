@@ -106,9 +106,9 @@ if(isset($result_email['email']) && !empty($result_email['email']))
 						 <ul>
 						 	<li class="text-info">Type:</li>
 							 <li><select class="select-option" name="type">
-							 	<option>Normal</option>
-							 	<option>Commercial</option>
-							 	<option>Event Managers</option>
+							 	<option value="1">Normal</option>
+							 	<option value="2">Commercial</option>
+							 	<option value="3">Event Managers</option>
 							 </select></li>
 						 </ul>
 						 <ul>
@@ -149,8 +149,7 @@ if(isset($result_email['email']) && !empty($result_email['email']))
 			</div>
 			<div class="reg-right">
 				 <h3>Completely Free Account</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <p>we welcome you to have a service which makes you free from your works now you just have to update your contact number to your id and stay free from calling work no matter how hard your matter or how many you have contact we will do your work as soon as possible</p>
             </div>
 			<div class="clearfix"></div>
 		</div>

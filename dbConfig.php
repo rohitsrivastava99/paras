@@ -1,1 +1,1 @@
-<?php//connect to mysql$con = mysqli_connect('localhost', 'root', '','lifeworks');//Test Connectionif (mysqli_connect_errno()) {    	echo "Failded to connect to Mysql:".mysqli_connect_errno();}session_start();	?>
+<?php//connect to mysql$con = mysqli_connect('localhost', 'root', '','lifeworks');//Test Connectionif (mysqli_connect_errno()) {    	echo "Failded to connect to Mysql:".mysqli_connect_errno();}//session_start();	?>
