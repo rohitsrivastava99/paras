@@ -1,6 +1,14 @@
 <link href="css/admin.css" rel="stylesheet" type="text/css" media="all" />
 <link href="css/tb.css" rel="stylesheet" type="text/css" media="all" />
 <?php include("dbConfig.php");?>
+<?php include("functions.php");
+	if($_REQUEST['command']=='add' && $_REQUEST['productid']>0){
+		$pid=$_REQUEST['productid'];
+		addtocart($pid,1);
+		header("location:shoppingcart.php");
+		exit();}
+	
+?>
 <?php
     include("header.php");
 ?>
@@ -10,8 +18,23 @@
 		$q = mysqli_query($con,"UPDATE users SET image = '".$_FILES['file']['name']."' WHERE email = '".$_SESSION['login']."'");
 	}
 ?>
+<script language="javascript">
+	function addtocart(pid){
+		document.form1.productid.value=pid;
+		document.form1.command.value='add';
+		document.form1.submit();
+	}
+</script>
+<form name="form1">
+	<input type="hidden" name="productid" />
+    <input type="hidden" name="command" />
 
 <div class="tbleft">
+<?php
+                        $query = "select * from products";
+			$result=mysqli_query($con, $query);
+			while($row=mysqli_fetch_array($result)){
+		?> <?php } ?>
     <div class="tabbable tabs-left">
         <ul class="nav nav-tabs">
           <li class="active"><a href="#a" data-toggle="tab">Description</a></li>
@@ -56,6 +79,7 @@
                  <div class="input-group">
                      <button class="btn btn-info">Submit</button>
                      <button class="btn btn-danger">Add To card</button>
+<input type="button" value="Add to Cart" onclick="addtocart(<?php echo $row['serial'] = 1;?>)" />
                  </div>
              </form>
          </div>
@@ -72,6 +96,7 @@
                  <div class="input-group">
                      <button class="btn btn-info">Submit</button>
                      <button class="btn btn-danger">Add To card</button>
+<input type="button" value="Add to Cart" onclick="addtocart(<?php echo $row['serial'] = 2;?>)" />
                      <br/>
                      <input type="file" name="fileToUpload" id="fileToUpload">
                      <input type="submit" value="Upload Image">
@@ -91,6 +116,7 @@
                  <div class="input-group">
                      <button class="btn btn-info">Submit</button>
                      <button class="btn btn-danger">Add To card</button>
+<input type="button" value="Add to Cart" onclick="addtocart(<?php echo $row['serial'] = 3;?>)" />
                      <br/>
                      <input type="file" name="fileToUpload2" id="fileToUpload2">
                     <input type="submit" value="Upload Image">
@@ -150,7 +176,9 @@
          </div>
         </div>
     </div>
+
 </div>
+</form>
 <?php
     include("footer.php");
 ?>
