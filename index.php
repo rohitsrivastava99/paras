@@ -23,8 +23,8 @@ $(document).ready(function() {
 <div class="slidercstm">
     <div class="picSlider demo-2">
         <ul>
-            <li><img src="images/a.jpg"></li>
-            <li><img src="images/b.jpg"></li>
+            <li><img src="images/slider1.jpg"></li>
+            <li><img src="images/slider2.jpg"></li>
             <li><img src="images/c.jpg"></li>
         </ul>
     </div>
@@ -34,8 +34,10 @@ $(document).ready(function() {
     <div class="abtsite">
         <h1>Website Information</h1>
         <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        </p>
+            We provide a such calling service  which is require by  comman man or many farm needed  and we do it for them 
+We do calling for over clients and provide them  feedback of their client 
+We do calling in provide information, invitation, guest list , and other service as massage to you and your friends and one messege to all in this service you can send one messege you more than 100 friends at very low cost.    
+ </p>
     </div>
 </div>
 
@@ -44,12 +46,24 @@ $(document).ready(function() {
 	<div class="container">
 		<div class="bottom-header">	
 			<h3>Services</h3>
-			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+			<p>we welcome you to have a service which makes you free from your works now you just have to update your contact number to your id and stay free from calling work no matter how hard your matter or how many you have contact we will do your work as soon as possible </p>
 		</div>
 		<div class="bottom-grids">
 			<div class="col-md-3 bottom-grid">
 				<div class="camera-grid">
-					<h3>Responsive Design</h3>
+					<h3>About Us</h3>
+					<p>Lorem ipsum dolor sit amet, co
+						ctetuer adipiscing elit, sed di
+						 nonummy nibh euismod te.</p>
+					<div class="readmore"><a href="about.php">Read more</a></div>
+				</div>
+				<div class="cam-font">
+					<i class="fa fa-camera"></i>
+				</div>
+			</div>
+			<div class="col-md-3 bottom-grid">
+				<div class="camera-grid">
+					<h3>Services</h3>
 					<p>Lorem ipsum dolor sit amet, co
 						ctetuer adipiscing elit, sed di
 						 nonummy nibh euismod te.</p>
@@ -61,11 +75,11 @@ $(document).ready(function() {
 			</div>
 			<div class="col-md-3 bottom-grid">
 				<div class="camera-grid">
-					<h3>Responsive Design</h3>
+					<h3>Terms And Condition</h3>
 					<p>Lorem ipsum dolor sit amet, co
 						ctetuer adipiscing elit, sed di
 						 nonummy nibh euismod te.</p>
-					<div class="readmore"><a href="services.php">Read more</a></div>
+					<div class="readmore"><a href="termandcondition.php">Read more</a></div>
 				</div>
 				<div class="cam-font">
 					<i class="fa fa-camera"></i>
@@ -73,23 +87,11 @@ $(document).ready(function() {
 			</div>
 			<div class="col-md-3 bottom-grid">
 				<div class="camera-grid">
-					<h3>Responsive Design</h3>
+					<h3>Contact Us</h3>
 					<p>Lorem ipsum dolor sit amet, co
 						ctetuer adipiscing elit, sed di
 						 nonummy nibh euismod te.</p>
-					<div class="readmore"><a href="services.php">Read more</a></div>
-				</div>
-				<div class="cam-font">
-					<i class="fa fa-camera"></i>
-				</div>
-			</div>
-			<div class="col-md-3 bottom-grid">
-				<div class="camera-grid">
-					<h3>Responsive Design</h3>
-					<p>Lorem ipsum dolor sit amet, co
-						ctetuer adipiscing elit, sed di
-						 nonummy nibh euismod te.</p>
-					<div class="readmore"><a href="services.php">Read more</a></div>
+					<div class="readmore"><a href="contact.php">Read more</a></div>
 				</div>
 				<div class="cam-font">
 					<i class="fa fa-camera"></i>
